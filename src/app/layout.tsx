@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { primaryFont } from '../fonts';
 
 export const metadata: Metadata = {
   title: 'Joaquín Bustelo',
@@ -12,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='es'>
-      <body>{children}</body>
+      <body className={primaryFont.className}>{children}</body>
     </html>
   );
 }

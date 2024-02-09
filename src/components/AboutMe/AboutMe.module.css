@@ -1,7 +1,101 @@
 .aboutMeContainer {
+  margin: 0 auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1000px;
+  padding: 0 20px;
+  z-index: 15;
 }
 
-.descriptionsContainer {
-  width: 70%;
+.textsContainer {
+  width: 100%;
+}
+
+.title {
+  font-size: 35px;
+}
+
+.subtitle {
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+
+.description {
+  font-size: 17px;
+}
+
+.btnCv {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  background-color: #e78a3d;
+  border: 0 solid #e78a3d;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 150px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+
+.btnCv:focus {
+  outline: 0;
+}
+
+.btnCv:active {
+  background-color: #83c9f4;
+}
+
+.btnCv:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.btnCv:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .butnCv {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .aboutMeContainer {
+    flex-direction: column-reverse;
+  }
+  .textsContainer {
+    margin-bottom: 20px;
+  }
+  .btnCv {
+    top: 15px;
+    margin: 0 auto;
+  }
 }

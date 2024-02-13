@@ -1,0 +1,10 @@
+.title {
+  text-align: center;
+  font-size: 30px;
+  z-index: 20;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}

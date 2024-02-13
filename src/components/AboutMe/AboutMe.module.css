@@ -9,6 +9,10 @@
   z-index: 15;
 }
 
+.aboutMeContainer > * {
+  z-index: 35;
+}
+
 .textsContainer {
   width: 100%;
 }

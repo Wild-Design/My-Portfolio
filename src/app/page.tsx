@@ -34,7 +34,7 @@ export default function Home() {
       >
         <div
           style={{
-            width: 'fit-content',
+            width: 'fit-content', //pa que no se estire hasta el maximo width
             padding: '20px',
           }}
         >
@@ -54,7 +54,12 @@ export default function Home() {
         <SecondWave themeColor={currentTheme.secondBackground} />
       </section>
 
-      <MySkills />
+      <section
+        className='thirdSection'
+        style={{ backgroundColor: currentTheme.thirdBackground }}
+      >
+        <MySkills currentTheme={currentTheme} />
+      </section>
       <FormContact />
     </main>
   );

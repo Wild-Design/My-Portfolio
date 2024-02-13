@@ -42,7 +42,9 @@ const AboutMe: FC<Props> = ({ currentTheme }) => {
           significativamente a proyectos y continuar creciendo como profesional
           en el campo del desarrollo web.
         </p>
-        <button className={styles.btnCv}>Mi CV</button>
+        <a href='/CV Joaquín Bustelo.pdf' download={true} className={styles.btnCv}>
+          Mi CV
+        </a>
       </div>
       <div>
         <Image src={MyPhoto} alt='Joaquín' width={150} />

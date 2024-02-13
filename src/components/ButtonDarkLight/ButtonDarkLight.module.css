@@ -8,6 +8,9 @@
   --circle-bg: rgb(0, 56, 146);
   --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
 }
+.uiSwitch > *{
+  z-index: 35;
+}
 
 .uiSwitch input {
   display: none;

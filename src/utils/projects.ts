@@ -69,13 +69,10 @@ const project3 = new Project(
 const project4 = new Project(
   'Countries App',
   'Proyecto individual (Bootcamp)',
-  `Proyecto individual donde incluí a tecnologías como Redux
-  Toolkit, TypeScript y mejores prácticas.
-  La app inicialmente muestra los primeros pokemons de la región de kanto,
-  cada pokemon tiene un botón para poder ver su versión multicolor y a su vez
-  cada pokemon tiene su página de detalles donde muestro sus estadísticas.
-  La app también tiene la posibilidad de buscar pokemons por nombre,
-  formulario para crear pokemons y etc`,
+  `Proyecto individual que consistía en
+  diseñar y desarrollar una aplicación de países que incluyera búsquedas, filtros,
+  clasificación y creación.
+  `,
   'https://github.com/Wild-Design/Mi-PI-de-Paises-Soy-Henry-',
   'https://www.youtube.com/watch?v=Xf_oy5h0eqM',
   null

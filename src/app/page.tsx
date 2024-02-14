@@ -26,6 +26,19 @@ export default function Home() {
 
   return (
     <main>
+      <img
+        src={'/Wolf.jpg'}
+        alt='Lobos'
+        style={{
+          position: 'fixed',
+          width: '100%',
+          height: '100vh',
+          objectFit: 'cover',
+          opacity: '.2',
+          zIndex: '20',
+          userSelect: 'none',
+        }}
+      />
       <section
         className='firstSection'
         style={{

@@ -29,7 +29,7 @@
   height: 200px;
   overflow: auto;
   --scrollbar-border-thickness: 0px;
-  --scrollbar-width: 15px;
+  --scrollbar-width: 10px;
   --scrollbar-height: 0px;
   --scrollbar-border-radius: 5px;
   --show-double-buttons: none;
@@ -47,8 +47,8 @@
 }
 
 .descriptionContainer::-webkit-scrollbar {
-  width: var(--scrollbar-width, 20px);
-  height: var(--scrollbar-height, 20px);
+  width: var(--scrollbar-width, 10px);
+  height: var(--scrollbar-height, 10px);
 }
 .descriptionContainer::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb-color, #e78a3d);

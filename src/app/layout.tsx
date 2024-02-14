@@ -13,19 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='es'>
-      <body className={primaryFont.className}>
-        <img
-          src={'/Wolf.jpg'}
-          alt='Lobos'
-          style={{
-            position: 'fixed',
-            width: '100%',
-            height: '100vh',
-            objectFit: 'cover',
-            opacity:'.2',
-            zIndex:'20'
-          }}
-        />
+      <body
+        suppressContentEditableWarning={true}
+        className={primaryFont.className}
+      >
         {children}
       </body>
     </html>

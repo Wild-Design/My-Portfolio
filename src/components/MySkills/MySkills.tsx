@@ -2,7 +2,7 @@ import styles from './MySkills.module.css';
 import ThemeConfig from '@/interfaces/ThemeConfig';
 import { FC } from 'react';
 import skillsIcons from '@/utils/skills';
-import Skill from './skill';
+import Skill from './Skill';
 
 interface Props {
   currentTheme: ThemeConfig;

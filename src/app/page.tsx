@@ -30,6 +30,7 @@ export default function Home() {
       <img
         src={'/Wolf.jpg'}
         alt='Lobos'
+        draggable={false}
         style={{
           position: 'fixed',
           width: '100%',

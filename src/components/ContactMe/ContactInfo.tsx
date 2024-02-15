@@ -18,8 +18,10 @@ const ContactInfo: FC<Props> = ({ currenntTheme }) => {
         style={{ color: currenntTheme.colorDescription }}
         className={styles.description}
       >
-        Si estás interesado en trabajar conmigo, no dudes en enviarme un
-        mensaje. ¡Estoy emocionado por la posibilidad de trabajar contigo!
+        Si estás interesado/a en trabajar conmigo, no dudes en enviarme un
+        mensaje a través de mi formulario de contacto o a través de alguna de
+        mis redes sociales que puedes encontrar en el pie de la página . ¡Estoy emocionado
+        por la posibilidad de trabajar contigo! 🫡
       </p>
     </div>
   );

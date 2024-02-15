@@ -21,6 +21,7 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
       className={styles.form}
       onSubmit={handleSubmit}
     >
+      <h2 className={styles.formTitle}>Contáctame</h2>
       <div className={styles.section}>
         <div className={styles.inputContainer}>
           <label htmlFor='name'>Nombre</label>

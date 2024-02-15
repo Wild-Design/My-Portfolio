@@ -1,6 +1,5 @@
 .form {
-  font-size: 18px;
-  max-width: 400px;
+  max-width: 550px;
   width: 100%;
   margin: 0 auto;
   padding: 20px;
@@ -8,8 +7,11 @@
   flex-direction: column;
   gap: 10px;
   border-radius: 15px;
-  z-index: 100;
-  backdrop-filter: blur(30px);
+}
+
+.formTitle {
+  text-align: center;
+  color: #fff;
 }
 
 .section {
@@ -22,6 +24,7 @@
 }
 .inputContainer label {
   display: block;
+  color: #fff;
 }
 .inputContainer input {
   font-family: inherit;
@@ -90,5 +93,6 @@
 @media screen and (max-width: 350px) {
   .section {
     flex-wrap: wrap;
+    gap: 10px;
   }
 }

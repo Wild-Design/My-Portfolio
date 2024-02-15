@@ -29,3 +29,11 @@
 .skillContainer svg {
   font-size: 35px;
 }
+
+@media screen and (max-width: 396px) {
+  .skillContainer {
+    font-size: 13px;
+    width: 80px;
+    height: 80px;
+  }
+}

@@ -1,7 +1,11 @@
+.container {
+  margin-top: 50px;
+}
+
 .title {
   text-align: center;
-  font-size: 30px;
-  z-index: 20;
+  font-size: 35px;
+  z-index: 50;
 }
 
 .skillsContainer {
@@ -9,7 +13,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   padding: 20px;
   max-width: 1000px;
+}
+
+.skillsContainer > * {
+  z-index: 35;
 }

@@ -11,9 +11,9 @@ import { BiLogoPostgresql } from 'react-icons/bi';
 import { TbBrandNextjs } from 'react-icons/tb';
 
 export default [
-  { name: 'HTML', icon: <FaHtml5 /> },
-  { name: 'CSS', icon: <FaCss3Alt /> },
-  { name: 'JavaScript', icon: <SiJavascript /> },
+  { name: 'HTML', icon: <FaHtml5 color='#f44' /> },
+  { name: 'CSS', icon: <FaCss3Alt color='#55d' /> },
+  { name: 'JavaScript', icon: <SiJavascript color='#0f0' /> },
   { name: 'React', icon: <FaReact /> },
   { name: 'NextJs', icon: <TbBrandNextjs /> },
   { name: 'Redux', icon: <SiRedux /> },

@@ -1,4 +1,5 @@
 'use client';
+import styles from './FormContact.module.css';
 import { FormEvent, ChangeEvent } from 'react';
 
 const FormContact = () => {
@@ -11,25 +12,25 @@ const FormContact = () => {
     const { name, value } = event.target;
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <div>
         <label htmlFor='name'>Tu nombre</label>
-        <input onChange={handleInputChange} type='text' />
+        <input onChange={handleInputChange} type='text' id='name' />
       </div>
       <div>
         <label htmlFor='last_name'>Apellido</label>
-        <input onChange={handleInputChange} type='text' />
+        <input onChange={handleInputChange} type='text' id='last_name' />
       </div>
       <div>
-        <label htmlFor='email'></label>
-        <input onChange={handleInputChange} type='text' />
+        <label htmlFor='email'>Tu email</label>
+        <input onChange={handleInputChange} type='text' id='email' />
       </div>
       <div>
         <label htmlFor='subject'>Asunto</label>
-        <input onChange={handleInputChange} type='text' />
+        <input onChange={handleInputChange} type='text' id='subject' />
       </div>
       <div>
-        <label htmlFor='message'></label>
+        <label htmlFor='message'>Tu mensaje</label>
         <textarea
           onChange={handleInputChange}
           name='message'

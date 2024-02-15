@@ -5,10 +5,11 @@ import ButtonDarkLight from '@/components/ButtonDarkLight/ButtonDarkLight';
 import AboutMe from '@/components/AboutMe/AboutMe';
 import MyProjects from '@/components/MyProjects/MyProjects';
 import MySkills from '@/components/MySkills/MySkills';
-import FormContact from '@/components/FormContact/FormContact';
+import FormContact from '@/components/ContactMe/FormContact';
 import FirstWave from '@/components/Waves/FirstWave';
 import SecondWave from '@/components/Waves/SecondWave';
 import { darkTheme, clearTheme } from '../utils/themes';
+import ContactInfo from '../components/ContactMe/ContactInfo';
 
 export default function Home() {
   const THEMES = { DARK: 'darkTheme', CLEAR: 'clearTheme' };
@@ -34,7 +35,7 @@ export default function Home() {
           width: '100%',
           height: '100vh',
           objectFit: 'cover',
-          opacity: '.2',
+          opacity: '.1',
           zIndex: '20',
           userSelect: 'none',
         }}
@@ -64,6 +65,7 @@ export default function Home() {
         }}
       >
         <MyProjects currentTheme={currentTheme} />
+        <MySkills currentTheme={currentTheme} />
         <SecondWave themeColor={currentTheme.secondBackground} />
       </section>
 
@@ -71,9 +73,11 @@ export default function Home() {
         className='thirdSection'
         style={{ backgroundColor: currentTheme.thirdBackground }}
       >
-        <MySkills currentTheme={currentTheme} />
+        <div className='contactme'>
+          <ContactInfo currenntTheme={currentTheme} />
+          <FormContact />
+        </div>
       </section>
-      <FormContact />
     </main>
   );
 }

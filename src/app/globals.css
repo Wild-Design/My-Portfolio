@@ -17,5 +17,19 @@
 
 .thirdSection {
   position: relative;
+  width: 100%;
   padding-top: 150px;
+  min-height: 500px;
+}
+
+.contactme {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contactme > * {
+  z-index: 35;
 }

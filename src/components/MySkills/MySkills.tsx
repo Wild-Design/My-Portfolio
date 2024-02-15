@@ -15,7 +15,14 @@ const MySkills: FC<Props> = ({ currentTheme }) => {
       </h2>
       <div className={styles.skillsContainer}>
         {skillsIcons.map((skill) => {
-          return <Skill key={skill.name} name={skill.name} icon={skill.icon} />;
+          return (
+            <Skill
+              key={skill.name}
+              currentTheme={currentTheme}
+              name={skill.name}
+              icon={skill.icon}
+            />
+          );
         })}
       </div>
     </div>

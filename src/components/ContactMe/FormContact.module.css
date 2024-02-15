@@ -1,0 +1,10 @@
+.form {
+  /* position: absolute; */
+  /* display: flex; */
+  top: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}

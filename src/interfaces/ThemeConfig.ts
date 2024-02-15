@@ -5,7 +5,9 @@ interface ThemeConfig {
   colorTitle: string;
   colorSubtitle: string;
   colorDescription: string;
+  colorProject: string;
   skillColor: string;
+  colorForm: string;
 }
 
 export default ThemeConfig;

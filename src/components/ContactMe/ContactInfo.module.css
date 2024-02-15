@@ -1,10 +1,7 @@
-.container {
-  display: block;
-  width: 100%;
-  z-index: 100;
+.subtitle {
+  font-size: 20px;
 }
 
-.title {
-  text-align: center;
-  font-size: 35px;
+.description {
+  font-size: 18px;
 }

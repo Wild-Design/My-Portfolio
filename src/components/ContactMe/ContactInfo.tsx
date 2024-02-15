@@ -8,9 +8,6 @@ interface Props {
 const ContactInfo: FC<Props> = ({ currenntTheme }) => {
   return (
     <div className={styles.container}>
-      <h3 style={{ color: currenntTheme.colorTitle }} className={styles.title}>
-        Contáctame
-      </h3>
       <h4
         style={{ color: currenntTheme.colorSubtitle }}
         className={styles.subtitle}

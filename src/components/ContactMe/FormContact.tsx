@@ -1,9 +1,12 @@
 'use client';
+import ThemeConfig from '@/interfaces/ThemeConfig';
 import styles from './FormContact.module.css';
-import { FormEvent, ChangeEvent } from 'react';
-import { primaryFont } from '../../fonts';
+import { FormEvent, ChangeEvent, FC } from 'react';
+interface Props {
+  currentTheme: ThemeConfig;
+}
 
-const FormContact = () => {
+const FormContact: FC<Props> = ({ currentTheme }) => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
   };
@@ -14,7 +17,7 @@ const FormContact = () => {
   };
   return (
     <form
-      // style={{ fontFamily: primaryFont.className }}
+      style={{ backgroundColor: currentTheme.colorForm + 80 }}
       className={styles.form}
       onSubmit={handleSubmit}
     >

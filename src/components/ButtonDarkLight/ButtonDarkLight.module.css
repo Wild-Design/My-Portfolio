@@ -8,7 +8,7 @@
   --circle-diameter: 32px;
   --circle-bg: rgb(0, 56, 146);
   --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
-  z-index: 100;
+  z-index: 150;
 }
 .uiSwitch > *{
   z-index: 35;

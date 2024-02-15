@@ -74,9 +74,18 @@ export default function Home() {
         className='thirdSection'
         style={{ backgroundColor: currentTheme.thirdBackground }}
       >
+        <h3
+          style={{
+            color: currentTheme.colorTitle,
+            textAlign: 'center',
+            fontSize: '35px',
+          }}
+        >
+          Contacto
+        </h3>
         <div className='contactme'>
           <ContactInfo currenntTheme={currentTheme} />
-          <FormContact />
+          <FormContact currentTheme={currentTheme} />
         </div>
       </section>
     </main>

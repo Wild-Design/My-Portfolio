@@ -7,15 +7,19 @@ export const darkTheme: ThemeConfig = {
   colorTitle: '#fff',
   colorSubtitle: '#afad9e',
   colorDescription: '#aeb7d5',
-  skillColor: '#27272A',
+  colorProject: '#2A3362',
+  skillColor: '#13465d',
+  colorForm: '#4C7EB5',
 };
 
 export const clearTheme: ThemeConfig = {
-  firstBackground: '#BFE6F2',
-  secondBackground: '#cce',
-  thirdBackground: '#ccc',
-  colorTitle: '',
-  colorSubtitle: '',
-  colorDescription: '',
-  skillColor: '#ccc',
+  firstBackground: '#E6E9F2 ',
+  secondBackground: '#F0F2F8 ',
+  thirdBackground: '#BFE1F1',
+  colorTitle: '#000',
+  colorSubtitle: '#afad9e',
+  colorDescription: 'aeb7d5',
+  colorProject: '#E6F2F8',
+  skillColor: '#13465d',
+  colorForm: '#13465d',
 };

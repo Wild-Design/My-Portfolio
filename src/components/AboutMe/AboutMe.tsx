@@ -1,10 +1,9 @@
 'use client';
 import { FC } from 'react';
-import MyPhoto from '../../../public/My.jpg';
+import MyPhoto from '../../../public/My.png';
 import Image from 'next/image';
 import styles from './AboutMe.module.css';
 import ThemeConfig from '@/interfaces/ThemeConfig';
-import { fontTitle } from '../../fonts';
 
 interface Props {
   currentTheme: ThemeConfig;
@@ -42,12 +41,16 @@ const AboutMe: FC<Props> = ({ currentTheme }) => {
           significativamente a proyectos y continuar creciendo como profesional
           en el campo del desarrollo web.
         </p>
-        <a href='/CV Joaquín Bustelo.pdf' download={true} className={styles.btnCv}>
+        <a
+          href='/CV Joaquín Bustelo.pdf'
+          download={true}
+          className={styles.btnCv}
+        >
           Mi CV
         </a>
       </div>
       <div>
-        <Image src={MyPhoto} alt='Joaquín' width={150} />
+        <Image src={MyPhoto} alt='Joaquín' width={200} />
       </div>
     </div>
   );

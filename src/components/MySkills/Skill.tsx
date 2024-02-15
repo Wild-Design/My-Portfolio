@@ -11,7 +11,7 @@ interface Props {
 const Skill: FC<Props> = ({ name, icon, currentTheme }) => {
   return (
     <div
-      style={{ backgroundColor: currentTheme.thirdBackground }}
+      style={{ backgroundColor: currentTheme.skillColor }}
       className={styles.skillContainer}
     >
       <span style={{ color: currentTheme.colorTitle }} className={styles.name}>

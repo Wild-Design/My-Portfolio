@@ -1,12 +1,10 @@
 .container {
-  /* position: absolute; */
   display: block;
   width: 100%;
   z-index: 100;
-  padding: 20px;
 }
 
 .title {
-  /* text-align: center; */
+  text-align: center;
   font-size: 35px;
 }

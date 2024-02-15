@@ -15,7 +15,7 @@ const ContactInfo: FC<Props> = ({ currenntTheme }) => {
         style={{ color: currenntTheme.colorSubtitle }}
         className={styles.subtitle}
       >
-        ¡Juntos podemos crear algo increíble!
+        ¡Juntos podemos crear algo increíble 😁!
       </h4>
       <p
         style={{ color: currenntTheme.colorDescription }}

@@ -46,7 +46,9 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
       onSubmit={handleSubmit}
     >
       <div className={styles.XD}>
-        <h3>En Desarrollo</h3>
+        <h3>
+          En Desarrollo <br /> 😋
+        </h3>
       </div>
       <h2 className={styles.formTitle}>Formulario de contacto</h2>
       <div className={styles.section}>

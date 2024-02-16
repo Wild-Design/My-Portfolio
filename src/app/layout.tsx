@@ -4,7 +4,8 @@ import { primaryFont } from '../fonts';
 export const metadata: Metadata = {
   title: 'Joaquín Bustelo',
   description: 'Portfolio personal',
-  assets: '../../public/My.png',
+  keywords:
+    'portfolio, desarrollo web, proyectos,HTML, CSS, JavaScript, React, Redux, NodeJs, Express, Sequelize, PostgreSql, TypeScript',
 };
 
 export default function RootLayout({

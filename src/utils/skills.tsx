@@ -6,7 +6,13 @@ import {
   FaGitAlt,
   FaGithub,
 } from 'react-icons/fa';
-import { SiJavascript, SiRedux, SiExpress, SiSequelize } from 'react-icons/si';
+import {
+  SiJavascript,
+  SiTypescript,
+  SiRedux,
+  SiExpress,
+  SiSequelize,
+} from 'react-icons/si';
 import { BiLogoPostgresql } from 'react-icons/bi';
 import { TbBrandNextjs } from 'react-icons/tb';
 
@@ -14,6 +20,7 @@ export default [
   { name: 'HTML', icon: <FaHtml5 color='E44D26' /> },
   { name: 'CSS', icon: <FaCss3Alt color='#264DE4' /> },
   { name: 'JavaScript', icon: <SiJavascript color='#F7DF1E' /> },
+  { name: 'TypeScript', icon: <SiTypescript color='#007ACC' /> },
   { name: 'React', icon: <FaReact color='#61DAFB' /> },
   { name: 'NextJs', icon: <TbBrandNextjs color='#000' /> },
   { name: 'Redux', icon: <SiRedux color='#764ABC' /> },

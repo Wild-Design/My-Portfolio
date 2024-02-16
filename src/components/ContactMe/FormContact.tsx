@@ -12,7 +12,6 @@ interface Props {
 const FormContact: FC<Props> = ({ currentTheme }) => {
   //--------------------------------------------------------
   const [formData, setFormData] = useState({});
-  console.log(formData);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -46,6 +45,9 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
       className={styles.form}
       onSubmit={handleSubmit}
     >
+      <div className={styles.XD}>
+        <h3>En Desarrollo</h3>
+      </div>
       <h2 className={styles.formTitle}>Formulario de contacto</h2>
       <div className={styles.section}>
         <div className={styles.inputContainer}>

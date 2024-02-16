@@ -9,7 +9,7 @@ const ContactInfo: FC<Props> = ({ currenntTheme }) => {
   return (
     <div className={styles.container}>
       <h4 className={styles.subtitle}>
-        ¡Juntos podemos crear algo increíble 😁!
+        ¡Juntos podemos crear algo increíble 😎!
       </h4>
       <p
         style={{ color: currenntTheme.colorDescription }}
@@ -17,8 +17,8 @@ const ContactInfo: FC<Props> = ({ currenntTheme }) => {
       >
         Si estás interesado/a en trabajar conmigo, no dudes en enviarme un
         mensaje a través de mi formulario de contacto o a través de alguna de
-        mis redes sociales que puedes encontrar en el pie de la página . ¡Estoy
-        emocionado por la posibilidad de trabajar contigo! 🫡
+        mis redes sociales que puedes encontrar en el pie de la página . <br />{' '}
+        ¡Estoy emocionado por la posibilidad de trabajar contigo!
       </p>
     </div>
   );

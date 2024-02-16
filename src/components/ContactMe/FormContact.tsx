@@ -14,21 +14,21 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
   const [formData, setFormData] = useState({});
   console.log(formData);
 
-  const sendEmail = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    emailjs
-      .sendForm('service_i9rowwi', 'template_lax5bvv', event.currentTarget, {
-        publicKey: 'zB4OPOZMhnXQGRz33',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        }
-      );
+    // emailjs
+    //   .sendForm('service_i9rowwi', 'template_lax5bvv', event.currentTarget, {
+    //     publicKey: 'zB4OPOZMhnXQGRz33',
+    //   })
+    //   .then(
+    //     () => {
+    //       console.log('SUCCESS!');
+    //     },
+    //     (error) => {
+    //       console.log('FAILED...', error.text);
+    //     }
+    //   );
   };
 
   const handleInputChange = (
@@ -44,7 +44,7 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
     <form
       style={{ backgroundColor: currentTheme.colorForm + 80 }}
       className={styles.form}
-      onSubmit={sendEmail}
+      onSubmit={handleSubmit}
     >
       <h2 className={styles.formTitle}>Formulario de contacto</h2>
       <div className={styles.section}>

@@ -8,6 +8,8 @@ interface ThemeConfig {
   colorProject: string;
   skillColor: string;
   colorForm: string;
+  border: string;
+  icon: string;
 }
 
 export default ThemeConfig;

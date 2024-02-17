@@ -29,11 +29,10 @@
 
 .description {
   font-size: 17px;
+  margin-bottom: 20px;
 }
 
 .btnCv {
-  margin-top: 20px;
-  margin-bottom: 5px;
   background-color: #e78a3d;
   border: 0 solid #e78a3d;
   box-sizing: border-box;

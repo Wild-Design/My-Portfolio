@@ -13,7 +13,10 @@ interface Props {
 const Project: FC<Props> = ({ currentTheme, project }) => {
   return (
     <div
-      style={{ background: currentTheme.firstBackground }}
+      style={{
+        background: currentTheme.firstBackground,
+        border: `1px solid ${currentTheme.border}`,
+      }}
       key={project.title}
       className={styles.project}
     >
@@ -37,7 +40,7 @@ const Project: FC<Props> = ({ currentTheme, project }) => {
       <div className={styles.links}>
         {project.github ? (
           <a href={project.github}>
-            <FaGithub fontSize={30} />
+            <FaGithub fontSize={30} color={currentTheme.icon} />
           </a>
         ) : (
           <span style={{ width: '30px' }}></span>
@@ -45,7 +48,7 @@ const Project: FC<Props> = ({ currentTheme, project }) => {
 
         {project.youtube ? (
           <a href={project.youtube}>
-            <FaYoutube fontSize={30} />
+            <FaYoutube fontSize={30} color={currentTheme.icon} />
           </a>
         ) : (
           <span style={{ width: '30px' }}></span>
@@ -53,7 +56,7 @@ const Project: FC<Props> = ({ currentTheme, project }) => {
 
         {project.deployment ? (
           <a href={project.deployment}>
-            <TbWorldWww fontSize={30} />
+            <TbWorldWww fontSize={30} color={currentTheme.icon} />
           </a>
         ) : (
           <span style={{ width: '30px' }}></span>

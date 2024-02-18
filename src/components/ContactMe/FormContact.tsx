@@ -46,7 +46,7 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
 
       emailjs
         .sendForm(SERVICE_ID || '', TEMPLATE_ID || '', event.currentTarget, {
-          publicKey: PUBLIC_KEY,
+          publicKey: PUBLIC_KEY || '',
         })
         .then(
           () => {

@@ -10,35 +10,6 @@
   border-radius: 15px;
 }
 
-.XD {
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #2b379ca8;
-  backdrop-filter: blur(2px);
-  border-radius: 15px;
-  z-index: 150;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-}
-.XD h3 {
-  display: block;
-  font-size: 50px;
-  color: #fff;
-  position: relative;
-  text-align: center;
-  transform: rotate(-15deg);
-  top: 180px;
-  -webkit-transform: rotate(-15deg);
-  -moz-transform: rotate(-15deg);
-  -ms-transform: rotate(-15deg);
-  -o-transform: rotate(-15deg);
-}
-
 .formTitle {
   font-size: 20px;
   letter-spacing: 1px;
@@ -93,6 +64,12 @@
   outline: none;
 }
 
+.errorContainer {
+  height: 15px;
+  color: #f00;
+  font-size: 14px;
+}
+
 .button {
   background-color: #e78a3d;
   border: 0 solid #e78a3d;
@@ -109,6 +86,7 @@
   text-decoration: none #000000 solid;
   text-decoration-thickness: auto;
   width: 150px;
+  height: 50px;
   position: relative;
   cursor: pointer;
   transform: rotate(-2deg);

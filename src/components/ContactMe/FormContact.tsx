@@ -4,30 +4,72 @@ import ThemeConfig from '@/interfaces/ThemeConfig';
 import styles from './FormContact.module.css';
 import { FormEvent, ChangeEvent, FC } from 'react';
 import emailjs from '@emailjs/browser';
+import formContactValidator from '@/validators/formContactValidator';
+import { RotatingLines } from 'react-loader-spinner';
+import { useRef } from 'react';
+
+const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
 interface Props {
   currentTheme: ThemeConfig;
 }
 
 const FormContact: FC<Props> = ({ currentTheme }) => {
-  //--------------------------------------------------------
-  const [formData, setFormData] = useState({});
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const [formData, setFormData] = useState({
+    user_name: '',
+    last_name: '',
+    user_email: '',
+    subject: '',
+    message: '',
+  });
+
+  interface Errors {
+    user_name?: string;
+    last_name?: string;
+    user_email?: string;
+    subject?: string;
+    message?: string;
+  }
+  const [errors, setErrors] = useState<Errors>({});
+
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setErrors(formContactValidator(formData));
+    if (!Object.keys(formContactValidator(formData)).length) {
+      setLoading(true);
 
-    // emailjs
-    //   .sendForm('service_i9rowwi', 'template_lax5bvv', event.currentTarget, {
-    //     publicKey: 'zB4OPOZMhnXQGRz33',
-    //   })
-    //   .then(
-    //     () => {
-    //       console.log('SUCCESS!');
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error.text);
-    //     }
-    //   );
+      emailjs
+        .sendForm(SERVICE_ID || '', TEMPLATE_ID || '', event.currentTarget, {
+          publicKey: PUBLIC_KEY,
+        })
+        .then(
+          () => {
+            setLoading(false);
+            console.log('SUCCESS!');
+            alert('Mensaje enviado :)');
+            setFormData({
+              user_name: '',
+              last_name: '',
+              user_email: '',
+              subject: '',
+              message: '',
+            });
+            formRef.current?.reset(); //Receteo el formulario para que no haga spam
+          },
+
+          (error) => {
+            setLoading(false);
+            console.log('FAILED...', error.text);
+            alert('No se pudo enviar el mensaje :(');
+          }
+        );
+    }
   };
 
   const handleInputChange = (
@@ -39,17 +81,14 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
       [name]: value,
     });
   };
+
   return (
     <form
+      ref={formRef}
       style={{ backgroundColor: currentTheme.colorForm + 80 }}
       className={styles.form}
       onSubmit={handleSubmit}
     >
-      <div className={styles.XD}>
-        <h3>
-          En Desarrollo <br /> 😋
-        </h3>
-      </div>
       <h2 className={styles.formTitle}>Formulario de contacto</h2>
       <div className={styles.section}>
         <div className={styles.inputContainer}>
@@ -61,6 +100,9 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
             name='user_name'
             placeholder='Tu nombre aquí...'
           />
+          <div className={styles.errorContainer}>
+            <span>{errors.user_name}</span>
+          </div>
         </div>
         <div className={styles.inputContainer}>
           <label htmlFor='last_name'>Apellido</label>
@@ -71,6 +113,9 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
             name='last_name'
             placeholder='Tu apellido aquí...'
           />
+          <div className={styles.errorContainer}>
+            <span>{errors.last_name}</span>
+          </div>
         </div>
       </div>
 
@@ -84,6 +129,9 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
             name='user_email'
             placeholder='Tu email aquí...'
           />
+          <div className={styles.errorContainer}>
+            <span>{errors.user_email}</span>
+          </div>
         </div>
         <div className={styles.inputContainer}>
           <label htmlFor='subject'>Asunto</label>
@@ -94,6 +142,9 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
             name='subject'
             placeholder='Asunto aquí...'
           />
+          <div className={styles.errorContainer}>
+            <span>{errors.subject}</span>
+          </div>
         </div>
       </div>
 
@@ -106,9 +157,22 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
           id='message'
           placeholder='Escribe tu mensaje aquí...'
         ></textarea>
+        <div className={styles.errorContainer}>
+          <span>{errors.message}</span>
+        </div>
       </div>
       <button className={styles.button} type='submit'>
-        Enviar
+        {loading ? (
+          <RotatingLines
+            strokeColor='#fff'
+            strokeWidth='5'
+            animationDuration='0.75'
+            width='30'
+            visible={true}
+          />
+        ) : (
+          'Enviar'
+        )}
       </button>
     </form>
   );

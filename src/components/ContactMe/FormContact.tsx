@@ -10,7 +10,6 @@ import { useRef } from 'react';
 
 const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
-const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
 interface Props {
   currentTheme: ThemeConfig;
@@ -46,7 +45,7 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
 
       emailjs
         .sendForm(SERVICE_ID || '', TEMPLATE_ID || '', event.currentTarget, {
-          publicKey: PUBLIC_KEY || '',
+          publicKey: 'zB4OPOZMhnXQGRz33',
         })
         .then(
           () => {

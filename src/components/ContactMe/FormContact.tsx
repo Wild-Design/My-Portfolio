@@ -8,8 +8,9 @@ import formContactValidator from '@/validators/formContactValidator';
 import { RotatingLines } from 'react-loader-spinner';
 import { useRef } from 'react';
 
-const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
-const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID || process.env.SERVICE_ID;
+const TEMPLATE_ID =
+  process.env.NEXT_PUBLIC_TEMPLATE_ID || process.env.TEMPLATE_ID;
 
 interface Props {
   currentTheme: ThemeConfig;

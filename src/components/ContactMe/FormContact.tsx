@@ -8,9 +8,9 @@ import formContactValidator from '@/validators/formContactValidator';
 import { RotatingLines } from 'react-loader-spinner';
 import { useRef } from 'react';
 
-const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID || process.env.SERVICE_ID;
-const TEMPLATE_ID =
-  process.env.NEXT_PUBLIC_TEMPLATE_ID || process.env.TEMPLATE_ID;
+const SERVICE_ID = 'service_i9rowwi';
+const TEMPLATE_ID = 'template_lax5bvv';
+const PUBLIC_KEY = 'zB4OPOZMhnXQGRz33';
 
 interface Props {
   currentTheme: ThemeConfig;
@@ -45,8 +45,8 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
       setLoading(true);
 
       emailjs
-        .sendForm(SERVICE_ID || '', TEMPLATE_ID || '', event.currentTarget, {
-          publicKey: 'zB4OPOZMhnXQGRz33',
+        .sendForm(SERVICE_ID, TEMPLATE_ID, event.currentTarget, {
+          publicKey: PUBLIC_KEY,
         })
         .then(
           () => {

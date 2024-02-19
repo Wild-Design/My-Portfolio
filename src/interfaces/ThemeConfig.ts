@@ -10,6 +10,7 @@ interface ThemeConfig {
   colorForm: string;
   border: string;
   icon: string;
+  reactIcon: string;
 }
 
 export default ThemeConfig;

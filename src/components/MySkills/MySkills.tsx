@@ -20,7 +20,12 @@ const MySkills: FC<Props> = ({ currentTheme }) => {
               key={skill.name}
               currentTheme={currentTheme}
               name={skill.name}
-              icon={skill.icon}
+              icon={
+                //Si el name es react le ejecuto la funcion y le paso el color actual porque el color que uso de fondo en las skills es igual al color original de react :( )
+                skill.name === 'React'
+                  ? (skill.icon as any)(currentTheme.reactIcon)
+                  : skill.icon
+              }
             />
           );
         })}

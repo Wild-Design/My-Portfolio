@@ -12,6 +12,7 @@ export const darkTheme: ThemeConfig = {
   colorForm: '#96c4ec',
   border: '#fff',
   icon: '#fff',
+  reactIcon: '#61DAFB',
 };
 
 export const clearTheme: ThemeConfig = {
@@ -26,4 +27,5 @@ export const clearTheme: ThemeConfig = {
   colorForm: '#547796',
   border: 'transparent',
   icon: '#2A3362',
+  reactIcon: '#000',
 };

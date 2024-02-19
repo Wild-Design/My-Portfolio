@@ -21,7 +21,10 @@ export default [
   { name: 'CSS', icon: <FaCss3Alt color='#264DE4' /> },
   { name: 'JavaScript', icon: <SiJavascript color='#F7DF1E' /> },
   { name: 'TypeScript', icon: <SiTypescript color='#007ACC' /> },
-  { name: 'React', icon: <FaReact color='#61DAFB' /> },
+  {
+    name: 'React',
+    icon: (color: string = '#61DAFB') => <FaReact color={color} />,
+  },
   { name: 'NextJs', icon: <TbBrandNextjs color='#000' /> },
   { name: 'Redux', icon: <SiRedux color='#764ABC' /> },
   { name: 'ReduxTollkit', icon: <SiRedux color='#764ABC' /> },
@@ -33,3 +36,7 @@ export default [
   { name: 'Git', icon: <FaGitAlt color='#F05032' /> },
   { name: 'GitHub', icon: <FaGithub color=' #181717' /> },
 ];
+
+/*En el array que exporto, el icono de react tiene una funcion porque da la casualidad
+que el color original de react es exactamente igual que el del fondo que lo contiene, tonces 
+le use esa funcion para pasarle el color que quiera cuando el tema sea claro (Es un desproposito pero bueno, ni modo XD) */

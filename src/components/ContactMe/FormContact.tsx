@@ -66,7 +66,7 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
               subject: '',
               message: '',
             });
-            formRef.current?.reset(); //Receteo el formulario para que no haga spam
+            formRef.current?.reset(); //Reseteo el formulario para que no haga spam
           },
 
           (error) => {
@@ -173,7 +173,8 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
           <span>{errors.message}</span>
         </div>
       </div>
-      <button className={styles.button} type='submit'>
+
+      <button className={styles.button} type={loading ? 'button' : 'submit'}>
         {loading ? (
           <RotatingLines
             strokeColor='#fff'

@@ -22,57 +22,63 @@ export class Project {
     this.deployment = deployment;
   }
 }
-
 const project1 = new Project(
-  'CantaJuega Conmigo',
-  'Trabajo Pasante (Guatemala)',
-  `Colabore en un proyecto real participando tanto en frontend y backend,
-  añadiendo funcionalidades como login de usuarios, register, funcionalidades en el
-  dashboard como la de ver reportes y responder a los mismos, ver estadísticas y
-  varias funcionalidades más.
-  `,
+  'Mi Portfolio',
+  'Proyecto personal',
+  `Bueno, este proyecto en sí mismo es el portfolio 😆.
+   Utilicé una combinación de tecnologías modernas como Next.js con TypeScript y Email.js.
+    Cada detalle, desde el diseño hasta
+     la funcionalidad, fue cuidadosamente diseñado y desarrollado por mí.
+  Explora las diferentes secciones para conocer más sobre mí, mis habilidades y
+   los proyectos en los que he trabajado. Si tienes alguna pregunta o comentario,
+    ¡no dudes en ponerte en contacto conmigo!`,
+  'https://github.com/Wild-Design/My-Portfolio',
   null,
-  null,
-  'xd'
+  '#'
 );
+
 const project2 = new Project(
   'Talkap',
   'Proyecto grupal (Bootcamp)',
-  `Proyecto donde trabajé en equipo. Creamos una
-  aplicación web de chat en tiempo real, donde cada usuario puede editar su
-  perfil como por ejemplo editar su foto, tener su propia biografía, etc. Mandar
-  mensajes privados, bloquear usuarios maliciosos, envío de audios, videos y
-  demás cosas como vista de administrador con total de usuarios, gráficas y
-  posibilidad de banear usuarios.
-  Mi roll en esta aplicación estuvo más enfocada en frontend creando diferentes
-  vistas y lógica, aunque también participé en backend añadiendo
-  funcionalidades como envío de emails y demás cosas.
-  `,
+  `Participé en un proyecto colaborativo donde creamos una aplicación web de chat en tiempo real.
+  Esta plataforma permite a los usuarios editar sus perfiles, incluyendo la opción de cambiar
+  su foto de perfil y añadir una biografía personalizada. Además, ofrece funcionalidades como
+  el envío de mensajes privados, la capacidad de bloquear usuarios malintencionados,
+  así como el intercambio de audios, videos y otros archivos multimedia.
+  La aplicación también cuenta con una vista de administrador que proporciona
+  acceso a métricas sobre el total de usuarios y gráficos estadísticos,
+  así como la capacidad de banear usuarios.
+  
+  En este proyecto, me enfoqué principalmente en el desarrollo frontend, diseñando diversas vistas y trabajando en la lógica de la interfaz de usuario. Sin embargo, también contribuí al desarrollo backend, implementando funcionalidades adicionales como el envío de correos electrónicos y otras tareas.`,
   'https://github.com/Proyecto-Final-Soy-Henry/Talkap',
   'https://www.youtube.com/watch?v=yGclKR5vHIg',
-  'xd'
+  null
 );
 const project3 = new Project(
   'Pokemon App',
   'Proyecto individual',
-  `Proyecto individual donde incluí a tecnologías como Redux
-  Toolkit, TypeScript y mejores prácticas.
-  La app inicialmente muestra los primeros pokemons de la región de kanto,
-  cada pokemon tiene un botón para poder ver su versión multicolor y a su vez
-  cada pokemon tiene su página de detalles donde muestro sus estadísticas.
-  La app también tiene la posibilidad de buscar pokemons por nombre,
-  formulario para crear pokemons y etc`,
+  `Durante este proyecto individual, me embarqué en el aprendizaje de tecnologías clave como
+    Redux Toolkit, TypeScript y la implementación de mejores prácticas de desarrollo.
+    La aplicación se centra en mostrar los Pokémon iniciales de la región de Kanto.
+    Cada Pokémon cuenta con un botón que permite visualizar su versión multicolor,
+    y además, se ha diseñado una página de detalles para cada uno donde se muestran
+    sus estadísticas. Además de esto, la aplicación ofrece funciones adicionales
+    como la búsqueda de Pokémon por nombre y un formulario para la creación
+    de nuevos Pokémon, entre otras características`,
   'https://github.com/Wild-Design/Pokemon-App',
   'https://www.youtube.com/watch?v=P6bqz0AeyNM',
-  'xd'
+  null
 );
 const project4 = new Project(
   'Countries App',
   'Proyecto individual (Bootcamp)',
-  `Proyecto individual que consistía en
-  diseñar y desarrollar una aplicación de países que incluyera búsquedas, filtros,
-  clasificación y creación.
-  `,
+  `Este proyecto individual fue mi primera experiencia en el desarrollo de una aplicación full stack.
+      La aplicación fue diseñada para buscar países y gestionar actividades asociadas a ellos. Incluye funciones de búsqueda,
+      filtrado, clasificación y creación  de actividades.
+      Cada país puede tener diferentes actividades, las cuales pueden ser creadas
+      y asociadas a los países mediante un formulario de creación. Además,
+      la aplicación cuenta con paginación y ofrece una página de detalles para cada país.
+      `,
   'https://github.com/Wild-Design/Mi-PI-de-Paises-Soy-Henry-',
   'https://www.youtube.com/watch?v=Xf_oy5h0eqM',
   null
@@ -80,10 +86,37 @@ const project4 = new Project(
 const project5 = new Project(
   'TaskEase',
   'Proyecto individual',
-  `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sequi dolor iure quisquam sapiente iusto unde adipisci. Quibusdam, qui obcaecati?`,
-  null,
+  `Desarrollé una aplicación personal similar a Trello, que abarca tanto el frontend
+        como el backend, donde implementé un sistema básico de autenticación y registro de usuarios.
+        Aunque no llegué a completar la estilización del login y otras características,
+        mi enfoque principal estuvo en el diseño de las tarjetas (cards).
+      Me dediqué a replicar el estilo de las tarjetas de Trello, permitiendo la creación,
+      eliminación y edición de tareas, así como la gestión de listas.
+      Además, trabajé en funcionalidades para editar los nombres de las listas,
+      entre otros detalles de diseño.`,
+  'https://github.com/Wild-Design/TaskEase',
   null,
   null
 );
 
-export default [project1, project2, project3, project4, project5] as Project[];
+const project6 = new Project(
+  'CantaJuega Conmigo',
+  'Trabajo Pasante (Guatemala)',
+  `Participé en un proyecto real colaborando tanto en el desarrollo frontend
+         como backend. Contribuí añadiendo diversas funcionalidades clave, como el sistema de
+          inicio de sesión de usuarios, registro de nuevas cuentas, y mejoras en el panel de control,
+           que incluyen la capacidad de visualizar reportes, responder a los mismos,
+            y acceder a estadísticas detalladas, entre otras funcionalidades..
+        `,
+  null,
+  null,
+  null
+);
+export default [
+  project1,
+  project2,
+  project3,
+  project4,
+  project5,
+  project6,
+] as Project[];

@@ -7,6 +7,7 @@ import emailjs from '@emailjs/browser';
 import formContactValidator from '@/validators/formContactValidator';
 import { RotatingLines } from 'react-loader-spinner';
 import { useRef } from 'react';
+import Swal from 'sweetalert2';
 
 const SERVICE_ID = 'service_i9rowwi';
 const TEMPLATE_ID = 'template_lax5bvv';
@@ -51,8 +52,13 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
         .then(
           () => {
             setLoading(false);
-            console.log('SUCCESS!');
-            alert('Mensaje enviado :)');
+            Swal.fire({
+              icon: 'success',
+              title: '¡Listo! 😁',
+              text: 'Tu mensaje ha sido enviado correctamente.',
+              footer:
+                '¡Gracias por ponerte en contacto! Pronto estaré respondiendo tu correo.',
+            });
             setFormData({
               user_name: '',
               last_name: '',
@@ -65,8 +71,14 @@ const FormContact: FC<Props> = ({ currentTheme }) => {
 
           (error) => {
             setLoading(false);
-            console.log('FAILED...', error.text);
-            alert('No se pudo enviar el mensaje :(');
+
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops... Algo salió mal',
+              text: 'No hemos podido enviar tu correo.',
+              footer:
+                'Por favor, verifica los datos ingresados e inténtalo de nuevo más tarde.',
+            });
           }
         );
     }

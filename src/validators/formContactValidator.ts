@@ -21,20 +21,41 @@ const formContactValidator = ({
   subject,
   message,
 }: FormData): Errors => {
-  const regexUsername = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]{3,50}$/;
-  const regexUserLastName = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]{3,50}$/;
   const regexUserEmail = /^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$/;
-  const regexUserSubject = /^[a-zA-Z0-9\s\-_.,;!?()]{1,60}$/;
 
   const errors: Errors = {};
 
-  if (!regexUsername.test(user_name)) errors.user_name = 'Nombre invalido';
-  if (!regexUserLastName.test(last_name))
-    errors.last_name = 'Apellido invalido';
+  if (!user_name.length) {
+    errors.user_name = 'Al menos 3 caracteres';
+    if (user_name.length >= 50) {
+      errors.user_name = 'Maximo 50 caracteres';
+    }
+  }
+  //---------------------------
+  if (!last_name.length) {
+    errors.last_name = 'Al menos 3 caracteres';
+    if (last_name.length >= 50) {
+      errors.last_name = 'Maximo 50 caracteres';
+    }
+  }
+  //---------------------------
+
   if (!regexUserEmail.test(user_email)) errors.user_email = 'Email invalido';
-  if (!regexUserSubject.test(subject)) errors.subject = 'Asunto invalido';
-  if (message.length < 3 || message.length > 1500)
-    errors.message = 'Mensaje invalido';
+
+  //---------------------------
+  if (!subject.length) {
+    errors.subject = 'Al menos 3 caracteres';
+    if (subject.length >= 30) {
+      errors.subject = 'Maximo 50 caracteres';
+    }
+  }
+  //---------------------------
+  if (!message.length) {
+    errors.message = 'Al menos 3 caracteres';
+    if (message.length >= 2000) {
+      errors.message = 'Maximo 2000 caracteres';
+    }
+  }
 
   return errors;
 };

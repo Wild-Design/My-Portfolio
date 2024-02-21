@@ -10,6 +10,7 @@ import FirstWave from '@/components/Waves/FirstWave';
 import SecondWave from '@/components/Waves/SecondWave';
 import { darkTheme, clearTheme } from '../utils/themes';
 import ContactInfo from '../components/ContactMe/ContactInfo';
+import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
   const THEMES = { DARK: 'darkTheme', CLEAR: 'clearTheme' };
@@ -88,6 +89,7 @@ export default function Home() {
           <FormContact currentTheme={currentTheme} />
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

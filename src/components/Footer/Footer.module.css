@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 150px;
+  background-color: #2d3f50;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footer hr {
+  max-width: 500px;
+  width: 100%;
+  height: fit-content;
+  color: #fff;
+}
+
+.iconsContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+  width: 300px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.iconsContainer a {
+  cursor: pointer;
+}
+.iconsContainer svg {
+  position: relative;
+  font-size: 30px;
+  color: #fff;
+  z-index: 1000;
+}

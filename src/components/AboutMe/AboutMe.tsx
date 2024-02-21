@@ -32,14 +32,17 @@ const AboutMe: FC<Props> = ({ currentTheme }) => {
           }}
           className={styles.description}
         >
-          Soy Programador Full Stack con un enfoque sólido en el desarrollo de
-          aplicaciones web de alta calidad. <br /> Mi pasión por la tecnología y
-          la resolución de problemas me ha llevado a adquirir habilidades
-          sólidas en el desarrollo de soluciones web. A pesar de mi relativa
-          juventud en este campo, mi dedicación y compromiso me han permitido
-          lograr resultados notables. <br /> Mi objetivo es contribuir
-          significativamente a proyectos y continuar creciendo como profesional
-          en el campo del desarrollo web.
+          Con una sólida formación como Programador Full Stack, me embarco en
+          cada proyecto con humildad y determinación.
+          <br />
+          Mi enfoque se centra en el desarrollo de aplicaciones web, donde la
+          curiosidad y el deseo de superación son mis principales impulsores.
+          Reconozco que cada día es una oportunidad para aprender algo nuevo y
+          mejorar mis habilidades. <br /> Mi objetivo es seguir creciendo
+          profesionalmente y contribuir de manera significativa al mundo del
+          desarrollo web, aprovechando mi enfoque analítico y mente creativa
+          para ofrecer soluciones innovadoras en cada proyecto en el que
+          participo..
         </p>
         <a
           href='/CV Joaquín Bustelo.pdf'

@@ -11,6 +11,7 @@ interface ThemeConfig {
   border: string;
   icon: string;
   reactIcon: string;
+  footer: string;
 }
 
 export default ThemeConfig;

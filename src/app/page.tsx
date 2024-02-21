@@ -89,7 +89,7 @@ export default function Home() {
           <FormContact currentTheme={currentTheme} />
         </div>
       </section>
-      <Footer />
+      <Footer currenntTheme={currentTheme} />
     </main>
   );
 }

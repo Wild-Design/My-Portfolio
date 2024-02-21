@@ -13,6 +13,7 @@ export const darkTheme: ThemeConfig = {
   border: '#fff',
   icon: '#fff',
   reactIcon: '#61DAFB',
+  footer: '#2d3f50',
 };
 
 export const clearTheme: ThemeConfig = {
@@ -28,4 +29,5 @@ export const clearTheme: ThemeConfig = {
   border: 'transparent',
   icon: '#2A3362',
   reactIcon: '#000',
+  footer: '#486083',
 };

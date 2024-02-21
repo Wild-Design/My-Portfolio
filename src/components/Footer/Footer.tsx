@@ -1,10 +1,18 @@
 import styles from './Footer.module.css';
 import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import { CiMail } from 'react-icons/ci';
+import ThemeConfig from '@/interfaces/ThemeConfig';
+import { FC } from 'react';
 
-const Footer = () => {
+interface Props {
+  currenntTheme: ThemeConfig;
+}
+const Footer: FC<Props> = ({ currenntTheme }) => {
   return (
-    <footer className={styles.footer}>
+    <footer
+      style={{ backgroundColor: currenntTheme.footer }}
+      className={styles.footer}
+    >
       <div className={styles.contentContainer}>
         <hr />
         <div className={styles.iconsContainer}>

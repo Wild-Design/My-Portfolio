@@ -10,7 +10,7 @@
   --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
   z-index: 150;
 }
-.uiSwitch > *{
+.uiSwitch > * {
   z-index: 35;
 }
 
@@ -73,8 +73,6 @@
   transition: all 500ms;
   opacity: 0;
 }
-
-/* actions */
 
 .uiSwitch input:checked + .slider .circle {
   left: calc(100% - var(--circle-diameter));

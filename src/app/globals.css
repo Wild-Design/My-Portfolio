@@ -9,6 +9,15 @@
   width: 100%;
 }
 
+.contactBtn {
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  color: #e78a3d;
+  cursor: pointer;
+  z-index: 50;
+}
+
 .secondSection {
   position: relative;
   width: 100%;

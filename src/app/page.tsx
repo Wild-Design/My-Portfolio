@@ -26,6 +26,16 @@ export default function Home() {
     setTheme(theme === THEMES.DARK ? THEMES.CLEAR : THEMES.DARK);
   };
 
+  const scrollToDown = () => {
+    /*Actualmente solo va hasta abjo de la página(que da la casualidad
+    que el formulario se encuentra aí mismo) pero lo ideal es usar
+    una referencia al formulario o una referencia a donde quiera ir*/
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <main>
       <img
@@ -48,14 +58,13 @@ export default function Home() {
           backgroundColor: currentTheme.firstBackground,
         }}
       >
-        <div
-          style={{
-            width: 'fit-content', //pa que no se estire hasta el maximo width
-            padding: '20px',
-          }}
-        >
+        <nav className='nav' style={{ padding: '20px' }}>
           <ButtonDarkLight changeTheme={handleChangeTheme} />
-        </div>
+          <span onClick={scrollToDown} className='contactBtn'>
+            Contacto
+          </span>
+        </nav>
+
         <AboutMe currentTheme={currentTheme} />
         <FirstWave themeColor={currentTheme.firstBackground} />
       </section>

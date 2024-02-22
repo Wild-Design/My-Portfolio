@@ -40,9 +40,8 @@ const AboutMe: FC<Props> = ({ currentTheme }) => {
           Reconozco que cada día es una oportunidad para aprender algo nuevo y
           mejorar mis habilidades. <br /> Mi objetivo es seguir creciendo
           profesionalmente y contribuir de manera significativa al mundo del
-          desarrollo web, aprovechando mi enfoque analítico y mente creativa
-          para ofrecer soluciones innovadoras en cada proyecto en el que
-          participo..
+          desarrollo web aprovechando mi enfoque analítico y mente creativa para
+          ofrecer soluciones innovadoras en cada proyecto en el que participo.
         </p>
         <a
           href='/CV Joaquín Bustelo.pdf'

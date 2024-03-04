@@ -11,11 +11,96 @@
 
 .contactBtn {
   position: absolute;
+  top: -7px;
   right: 20px;
-  font-size: 20px;
-  color: #e78a3d;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.2rem;
+  padding-inline: 0.5rem;
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  color: #ffff;
+  gap: 10px;
+  border: 2px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 16px;
+  letter-spacing: 1px;
   z-index: 50;
+  -webkit-border-radius: 9999px;
+  -moz-border-radius: 9999px;
+  -ms-border-radius: 9999px;
+  -o-border-radius: 9999px;
+}
+
+.icon {
+  transform: rotate(90deg);
+  width: 24px;
+  height: 24px;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+
+.contactBtn:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.contactBtn:hover .icon {
+  transform: rotate(450deg);
+  -webkit-transform: rotate(450deg);
+  -moz-transform: rotate(450deg);
+  -ms-transform: rotate(450deg);
+  -o-transform: rotate(450deg);
+}
+
+.contactBtn:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.contactBtn::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
 }
 
 .secondSection {

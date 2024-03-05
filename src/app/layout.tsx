@@ -15,10 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='es'>
-      <body
-        suppressContentEditableWarning={true}
-        className={primaryFont.className}
-      >
+      <body suppressHydrationWarning={true} className={primaryFont.className}>
         {children}
       </body>
     </html>

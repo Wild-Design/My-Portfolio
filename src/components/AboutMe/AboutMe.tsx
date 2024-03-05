@@ -20,12 +20,12 @@ const AboutMe: FC<Props> = ({ currentTheme }) => {
           Hola!, <br />
           Soy <strong>Joaquín Bustelo</strong>
         </h1>
-        <h3
+        <h2
           style={{ color: currentTheme.colorSubtitle }}
           className={styles.subtitle}
         >
           <strong>Desarrollador Web FullStack</strong>
-        </h3>
+        </h2>
         <p
           style={{
             color: currentTheme.colorDescription,

@@ -19,19 +19,29 @@ const Footer: FC<Props> = ({ currenntTheme }) => {
           <a
             href='https://www.linkedin.com/in/joaquin-bustelo-0593a9242/'
             target='_blank'
+            title='Linkedin'
           >
             <FaLinkedin />
           </a>
-          <a href='https://github.com/Wild-Design' target='_blank'>
+          <a
+            href='https://github.com/Wild-Design'
+            target='_blank'
+            title='GitHub'
+          >
             <FaGithub />
           </a>
           <a
             href='https://api.whatsapp.com/send?phone=2317534689'
             target='_blank'
+            title='Whatsapp'
           >
             <FaWhatsapp />
           </a>
-          <a href='mailto:brenneke_ruger@hotmail.com' target='_blank'>
+          <a
+            href='mailto:brenneke_ruger@hotmail.com'
+            target='_blank'
+            title='Email'
+          >
             <CiMail />
           </a>
         </div>

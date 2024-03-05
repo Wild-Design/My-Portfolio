@@ -39,7 +39,7 @@ const Project: FC<Props> = ({ currentTheme, project }) => {
       </div>
       <div className={styles.links}>
         {project.github ? (
-          <a href={project.github} target='BLANK'>
+          <a href={project.github} target='BLANK' title='GitHub'>
             <FaGithub fontSize={30} color={currentTheme.icon} />
           </a>
         ) : (
@@ -47,7 +47,7 @@ const Project: FC<Props> = ({ currentTheme, project }) => {
         )}
 
         {project.youtube ? (
-          <a href={project.youtube} target='BLANK'>
+          <a href={project.youtube} target='BLANK' title='Youtube'>
             <FaYoutube fontSize={30} color={currentTheme.icon} />
           </a>
         ) : (
@@ -55,7 +55,7 @@ const Project: FC<Props> = ({ currentTheme, project }) => {
         )}
 
         {project.deployment ? (
-          <a href={project.deployment} target='BLANK'>
+          <a href={project.deployment} title='Producción' target='BLANK'>
             <TbWorldWww fontSize={30} color={currentTheme.icon} />
           </a>
         ) : (

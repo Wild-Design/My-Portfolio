@@ -12,7 +12,7 @@ const FirstWave: FC<Props> = ({ themeColor }) => {
         height: '150px',
         overflow: 'hidden',
         position: 'absolute',
-        bottom: '-150px',
+        bottom: '-145px',
         zIndex: '10',
       }}
     >
